@@ -20,8 +20,12 @@ class SignIn : AppCompatActivity() {
 
 
 
-        if(email == "" && senha == "" ) {
+        if(email != "" && senha != "" ) {
             val intent = Intent(this, HomePage::class.java)
+
+            intent.putExtra("email", email.toString())
+            intent.putExtra("senha", senha.toString())
+
             startActivity(intent)
             finish()
         }

@@ -5,8 +5,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
 import com.google.gson.Gson
+import com.google.gson.JsonObject
 import kotlinx.android.synthetic.main.activity_home_page.*
 import net.glxn.qrgen.android.QRCode
+import org.json.JSONObject
+import org.json.JSONStringer
 
 class HomePage : AppCompatActivity() {
 
@@ -16,7 +19,10 @@ class HomePage : AppCompatActivity() {
     }
 
     fun showQrCodeScreen(V : View){
-        createQrCode("{ email: teste@teste, senha:teste}")
+        val json = JsonObject()
+        json.addProperty("email", intent.extras?.getString("email"))
+        json.addProperty("senha", intent.extras?.getString("senha"))
+        createQrCode(json)
         qr_code_screen.visibility = View.VISIBLE
     }
 
@@ -24,7 +30,7 @@ class HomePage : AppCompatActivity() {
         qr_code_screen.visibility = View.INVISIBLE
     }
 
-    fun createQrCode( usuario:String ){
+    fun createQrCode( usuario:JsonObject ){
         val gson = Gson()
         val bitmap = QRCode.from(gson.toJson(usuario)).withSize(1000, 1000).bitmap()
         qr_code.setImageBitmap(bitmap)
