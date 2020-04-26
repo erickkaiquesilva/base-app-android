@@ -19,12 +19,13 @@ class SignIn : AppCompatActivity() {
         val senha = password.text.toString()
 
 
+        val usuario = GetUsuarioTask().execute(email, senha).get()
 
-        if(email != "" && senha != "" ) {
+
+        if(usuario != null) {
             val intent = Intent(this, HomePage::class.java)
 
-            intent.putExtra("email", email.toString())
-            intent.putExtra("senha", senha.toString())
+            intent.putExtra("usuario", usuario)
 
             startActivity(intent)
             finish()
