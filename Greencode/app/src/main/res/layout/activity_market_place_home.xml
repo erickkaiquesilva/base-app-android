@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarketPlaceHome">
+    
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/search_box"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:paddingHorizontal="33dp"
+    android:paddingVertical="29dp"
+    android:background="@color/colorPrimary">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/search_box"
+        android:paddingStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/et_search_box"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_caroussel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/search_box"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/destaques"
+            android:textColor="#000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="29dp"/>
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:padding="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_card_normal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_produto"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@drawable/produto"
+                android:padding="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_produto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/troque_seus_pontos"
+                app:layout_constraintLeft_toRightOf="@id/img_produto"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pontos"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_produto"
+                app:layout_constraintLeft_toRightOf="@id/img_produto"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_caroussel"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/lista_produto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29dp"
+            android:text="@string/lista_produtos"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lista_produto">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/primeiro_produto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_card_normal"
+                android:layout_margin="2.5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/segundo_produto"
+                app:layout_constraintBottom_toTopOf="@id/terceiro_produto">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:padding="20dp"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/ingresso_1"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ingresso"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintRight_toRightOf="parent"/>
+
+                   <TextView
+                       android:id="@+id/txt_ingresso"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="10sp"
+                       android:text="@string/Ingresso"
+                       android:layout_marginTop="20dp"
+                       app:layout_constraintTop_toBottomOf="@id/ingresso_1"/>
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/pontos"
+                       android:textStyle="bold"
+                       android:layout_marginTop="30dp"
+                       app:layout_constraintTop_toBottomOf="@id/txt_ingresso"/>
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/segundo_produto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_card_normal"
+                android:layout_margin="2.5dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/primeiro_produto"
+                app:layout_constraintBottom_toTopOf="@id/quarto_produto">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ingresso_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ingresso"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/txt_ingresso_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="@string/Ingresso"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/ingresso_2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pontos"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_ingresso_2"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/terceiro_produto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_card_normal"
+                android:layout_margin="2.5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/quarto_produto"
+                app:layout_constraintTop_toBottomOf="@id/primeiro_produto"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ingresso_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ingresso"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/txt_ingresso_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="@string/Ingresso"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/ingresso_3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pontos"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_ingresso_3"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/quarto_produto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/bg_card_normal"
+                android:layout_margin="2.5dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/terceiro_produto"
+                app:layout_constraintTop_toBottomOf="@id/segundo_produto"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ingresso_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ingresso"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/txt_ingresso_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="@string/Ingresso"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/ingresso_4"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pontos"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_ingresso_4"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

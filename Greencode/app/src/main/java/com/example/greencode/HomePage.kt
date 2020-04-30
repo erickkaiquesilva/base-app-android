@@ -1,5 +1,6 @@
 package com.example.greencode
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -35,4 +36,10 @@ class HomePage : AppCompatActivity() {
         val bitmap = QRCode.from(gson.toJson(usuario)).withSize(1000, 1000).bitmap()
         qr_code.setImageBitmap(bitmap)
     }
+
+    fun goToMarketPlace (v : View){
+        val intent = Intent(this, MarketPlaceHome::class.java)
+        startActivity(intent)
+    }
+
 }
