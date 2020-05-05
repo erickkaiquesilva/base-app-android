@@ -10,7 +10,7 @@ object ClienteViaUsuario {
         return Feign.builder()
             .decoder(GsonDecoder())
             .encoder(GsonEncoder())
-            .target(UsuarioRequests::class.java, "http://greencode-backend-lb-170707148.us-east-1.elb.amazonaws.com")
+            .target(UsuarioRequests::class.java, "http://greencode-backend-lb-355874270.us-east-1.elb.amazonaws.com")
     }
 
 }
