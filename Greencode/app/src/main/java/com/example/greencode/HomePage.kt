@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_home_page.*
 import net.glxn.qrgen.android.QRCode
 import org.json.JSONObject
 import org.json.JSONStringer
+import java.io.Serializable
 
 class HomePage : AppCompatActivity() {
 
@@ -20,10 +21,9 @@ class HomePage : AppCompatActivity() {
     }
 
     fun showQrCodeScreen(V : View){
-        val json = JsonObject()
-        json.addProperty("email", intent.extras?.getString("email"))
-        json.addProperty("senha", intent.extras?.getString("senha"))
-        createQrCode(json)
+        val usuario:Usuario = intent.getSerializableExtra("usuario") as Usuario
+
+        createQrCode(usuario)
         qr_code_screen.visibility = View.VISIBLE
     }
 
@@ -31,9 +31,8 @@ class HomePage : AppCompatActivity() {
         qr_code_screen.visibility = View.INVISIBLE
     }
 
-    fun createQrCode( usuario:JsonObject ){
-        val gson = Gson()
-        val bitmap = QRCode.from(gson.toJson(usuario)).withSize(1000, 1000).bitmap()
+    fun createQrCode( usuario:Usuario ){
+        val bitmap = QRCode.from(Gson().toJson(usuario)).withSize(1000, 1000).bitmap()
         qr_code.setImageBitmap(bitmap)
     }
 
