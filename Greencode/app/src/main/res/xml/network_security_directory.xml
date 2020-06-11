@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-    <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">greencode-backend-lb-355874270.us-east-1.elb.amazonaws.com</domain>
-    </domain-config>
-</network-security-config>

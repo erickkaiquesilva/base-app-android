@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Green Code</string>
+    <string name="intro_text">A different way to\nrecycle</string>
+    <string name="btn_login">I already have login</string>
+    <string name="btn_signup">Sing Up</string>
+    <string name="back_txt">Press again to quit</string>
+    <string name="et_signup_name">Name</string>
+    <string name="et_signup_surname">Surname</string>
+    <string name="et_signup_id">SSN</string>
+    <string name="et_signup_email">Email</string>
+    <string name="et_signup_password">Password</string>
+    <string name="btn_signup_continue">Continue</string>
+    <string name="tv_welcome_congrats">"CONGRATULATIONS "</string>
+    <string name="tv_welcome_info">You have just joined a unique challenge that only has to help
+        the whole world, recycle your garbage and still win with it.</string>
+    <string name="btn_welcome">START RECYCLING</string>
+    <string name="first_access_text_1">We at GREEN CODE aim to help the inhabitants of the land
+        to recycle the waste they generate, such as plastic, metal, paper and others. For that we
+        are happy with the fact that you allow us to help you dispose of your garbage in a way that
+        is more pleasant to the environment and society worldwide.</string>
+    <string name="first_access_title_1">WELCOME TO YOUR JOURNEY\n
+        <font fgcolor="#26BF4C"><b>GREEN</b></font></string>
+    <string name="first_access_title_2">WHAT DOES \n
+        <font fgcolor="#26BF4C"><b>GREEN CODE</b></font>\nRECYCLE?</string>
+    <string name="first_access_title_3">WHAT DO YOU GET FROM \n
+        <font fgcolor="#26BF4C"><b>RECYCLING?</b></font></string>
+    <string name="first_access_text_2">Initially the <b>GREEN CODE MACHINE</b> collect plastic
+        materials as well as glass composite materials.</string>
+    <string name="first_access_text_3">"We at <b>GREEN CODE</b> thought about what we could give to our
+        recyclers, and thinking about that we decided to give <font fgcolor="#26BF4C"><b>GREEN</b></font>
+        points to each recycled
+        material and with these points our recyclers could exchange for discounts on products,
+        services or even donate to an NGO.  "</string>
+    <string name="next">Next</string>
+    <string name="dotted">" • "</string>
+    <string name="finish">Finish</string>
+    <string name="btn_do_login">Sing In</string>
+    <string name="keep_credentials">Keep me connected</string>
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/baseColor</item>
+        <item name="android:buttonStyle">@style/Button</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColorHint">#FFF</item>
+    </style>
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@color/grey</item>
+        <item name="trackTint">@color/switch_track</item>
+    </style>
+</resources>

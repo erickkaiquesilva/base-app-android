@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name='baseColor'>#004B30</color>
+    <color name="greencode">#26BF4C</color>
+    <color name="txt_color">#000</color>
+    <color name="grey">#515151</color>
+</resources>

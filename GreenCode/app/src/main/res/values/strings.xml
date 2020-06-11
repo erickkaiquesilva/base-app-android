@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Green Code</string>
+    <string name="intro_text">Um jeito diferente de\nreciclar</string>
+    <string name="btn_login">Já tenho login</string>
+    <string name="btn_signup">Fazer cadastro</string>
+    <string name="back_txt">Pressione novamente para sair</string>
+    <string name="et_signup_name">Nome</string>
+    <string name="et_signup_surname">Sobrenome</string>
+    <string name="et_signup_id">CPF</string>
+    <string name="et_signup_email">Email</string>
+    <string name="et_signup_password">Senha</string>
+    <string name="btn_signup_continue">Continuar</string>
+    <string name="tv_welcome_congrats">PARABÉNS</string>
+    <string name="tv_welcome_info">Você acaba de se juntar a um desafio único e que só tem a ajudar o mundo todo, recicle o seu lixo e ainda ganhe com isso.</string>
+    <string name="btn_welcome">COMEÇAR A RECICLAR</string>
+    <string name="first_access_title_1"><![CDATA[ BEM VINDO A SUA<br>JORNADA<br><font color="#26BF4C"><b>GREEN</b></font>]]></string>
+    <string name="first_access_title_2"><![CDATA[ O QUE A<br><font color="#26BF4C"><b>GREEN CODE</b></font><br>RECICLA ?]]></string>
+    <string name="first_access_title_3"><![CDATA[ O QUE VOCÊ GANHA <br><font color="#26BF4C"><b>RECICLANDO ?</b></font>]]></string>
+    <string name="first_access_text_1">Nós da GREEN CODE temos como objetivo ajudar os moradores da terra a reciclarem os residuos que eles geram, como plástico, metal, papel entre outros. Para isso ficamos felizes com o fato de você permitir que nós ajude você a descarta seu lixo de uma maneira mais agradavel ao meio ambiente e a sociedade mundial.</string>
+    <string name="first_access_text_2"><![CDATA[ Inicialmente as <b>MACHINE</b> da <b>GREEN CODE</b> recolhem materiais plásticos e também materiais composto de vidro.]]></string>
+    <string name="first_access_text_3"><![CDATA[ Nós da <b>GREEN CODE</b> pensamos no que poderiamos dar a nossos recicladores, e pensando nisso nós resolvemos dar pontos <font color="#26BF4C"><b>GREEN</b></font> a cada material reciclado e com estes pontos o nossos recicladores poderiam trocar por descontos em produtos, serviços ou até mesmo doar para uma ONG.]]></string>
+    <string name="next">Próximo</string>
+    <string name="dotted">" • "</string>
+    <string name="finish">Finalizar</string>
+    <string name="btn_do_login">Entrar</string>
+    <string name="keep_credentials">Me mantenha conectado</string>
+</resources>
