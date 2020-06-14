@@ -37,4 +37,7 @@
     <string name="finish">Terminar</string>
     <string name="btn_do_login">Iniciar sesión</string>
     <string name="keep_credentials">Mantenme conectado</string>
+    <string name="user_points">1000.00</string>
+    <string name="user_name">José Silva</string>
+    <string name="qrcode">QRCode</string>
 </resources>

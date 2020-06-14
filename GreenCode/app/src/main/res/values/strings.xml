@@ -24,4 +24,17 @@
     <string name="finish">Finalizar</string>
     <string name="btn_do_login">Entrar</string>
     <string name="keep_credentials">Me mantenha conectado</string>
+    <string name="pts">Pts:</string>
+    <string name="user_points">1000.00</string>
+    <string name="hi">Olá</string>
+    <string name="user_name">José Silva</string>
+    <string name="qrcode">QRCode</string>
+    <string name="qrcode_infos">Para que você possa reciclar acesse seu QRCode e depois mostre para máquina para ser autenticado e gerar pontos.</string>
+    <string name="location_txt">Encontre pontos de coleta e ganhe mais pontos reciclando.</string>
+    <string name="congrats">PARABÉNS</string>
+    <string name="congrats_txt">voce ja alcançou a marca de 500 materiais reciclados em nossos pontos de reciclagem, o GREEN CODE agradesse a sua ajuda em nossa missão</string>
+    <string name="greecode_way"><![CDATA[GREEN CODE um jeito diferente de reciclar  😁]]></string>
+    <string name="marketplace">Marketplace</string>
+    <string name="market_txt">Troque seus pontos Green por produtos, serviços ou  até mesmo ajude uma ONG em um projeto.</string>
+    <string name="marketplace_btn">TROCAR MEUS PONTOS</string>
 </resources>
