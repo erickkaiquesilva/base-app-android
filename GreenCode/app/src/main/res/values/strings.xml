@@ -37,4 +37,5 @@
     <string name="marketplace">Marketplace</string>
     <string name="market_txt">Troque seus pontos Green por produtos, serviços ou  até mesmo ajude uma ONG em um projeto.</string>
     <string name="marketplace_btn">TROCAR MEUS PONTOS</string>
+    <string name="showQrCode">MOSTRE O QR CODE\n PARA A CÂMERA DA MÁQUINA</string>
 </resources>

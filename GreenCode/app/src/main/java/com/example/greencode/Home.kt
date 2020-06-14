@@ -16,4 +16,9 @@ class Home : AppCompatActivity() {
         val intent = Intent(this, Marketplace::class.java)
         startActivity(intent)
     }
+
+    fun goToQRCode(v:View){
+        val intent = Intent(this, QRCodeView::class.java)
+        startActivity(intent)
+    }
 }
