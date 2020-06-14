@@ -263,6 +263,7 @@
                     app:layout_constraintTop_toBottomOf="@id/marketplace_txt"/>
 
                 <Button
+                    android:onClick="goToMarketplace"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/marketplace_btn"
