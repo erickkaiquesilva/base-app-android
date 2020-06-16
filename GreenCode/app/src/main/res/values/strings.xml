@@ -41,4 +41,7 @@
     <string name="marketplace_info">troque seus pontos greens por descontos em produtos ou servios, ou até mesmo doe para uma ONG e ajude uma causa</string>
     <string name="highlights">Destaques</string>
     <string name="most_searched">PRODUTOS MAIS\nPROCURADOS</string>
+    <string name="ptsgreen">Pontos Green</string>
+    <string name="observation">Observação</string>
+    <string name="changepoints">Trocar Pontos</string>
 </resources>
