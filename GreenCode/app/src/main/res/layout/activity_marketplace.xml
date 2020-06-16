@@ -29,15 +29,12 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/memu_bar">
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingBottom="50dp"
+            app:layout_constraintTop_toBottomOf="@id/memu_bar"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
                 android:id="@+id/marketplace_txt"
@@ -48,7 +45,7 @@
                 android:textColor="@color/greencode"
                 android:textStyle="bold"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -65,58 +62,68 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/marketplace_txt"/>
 
-            <TextView
-                android:id="@+id/highlights"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/highlights"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="45dp"
-                android:layout_marginLeft="15dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txt_infos"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_highlights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_infos">
 
-            <HorizontalScrollView
-                android:id="@+id/product_highlight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                app:layout_constraintTop_toBottomOf="@id/highlights">
+                    <TextView
+                        android:id="@+id/highlights"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/highlights"
+                        android:textSize="24sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
 
-                <LinearLayout
-                    android:id="@+id/highlights_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"/>
+                    <HorizontalScrollView
+                        android:id="@+id/product_highlight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/highlights">
 
-            </HorizontalScrollView>
+                        <LinearLayout
+                            android:id="@+id/highlights_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
 
-            <TextView
-                android:id="@+id/most_searched"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/most_searched"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="35dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/product_highlight"/>
+                    </HorizontalScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="30dp"
-                app:layout_constraintTop_toBottomOf="@id/most_searched">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@id/layout_highlights">
 
-                <LinearLayout
-                    android:id="@+id/most_searched_list"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/most_searched"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/most_searched"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="15dp"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
 
-            </HorizontalScrollView>
+                    <HorizontalScrollView
+                        android:id="@+id/most_searched_scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toBottomOf="@id/most_searched"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/most_searched_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </HorizontalScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
