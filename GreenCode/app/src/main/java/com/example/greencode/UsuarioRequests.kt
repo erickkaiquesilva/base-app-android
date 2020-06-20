@@ -11,5 +11,4 @@ interface UsuarioRequests {
     @RequestLine("POST /signup")
     fun cadastrarUsuario(novoUsuario: Usuario) : Usuario
 
-
 }
