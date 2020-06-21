@@ -16,17 +16,17 @@ class SignIn : AppCompatActivity() {
 
 
     fun goToHomePage(v: View){
-        val email = et_email.text.toString()
-        val senha = et_password.text.toString()
-
-        val res = LoginTask().execute(Usuario(email = email, senha = senha)).get()
-
-        if(res != null){
+//        val email = et_email.text.toString()
+//        val senha = et_password.text.toString()
+//
+//        val res = LoginTask().execute(Usuario(email = email, senha = senha)).get()
+//
+//        if(res != null){
             val intent = Intent(this, Home::class.java)
-            intent.putExtra("usuario",res)
+//            intent.putExtra("usuario",res)
             startActivity(intent)
             finish()
-        }
+//        }
 
     }
 

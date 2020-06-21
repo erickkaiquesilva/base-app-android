@@ -1,7 +1,10 @@
 package com.example.greencode
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.activity.OnBackPressedCallback
 
 class Marketplace : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,4 +25,9 @@ class Marketplace : AppCompatActivity() {
         transaction_highlight.commit()
         transaction_most_searched.commit()
     }
+
+    fun backToHome(v:View){
+        onBackPressed()
+    }
+
 }

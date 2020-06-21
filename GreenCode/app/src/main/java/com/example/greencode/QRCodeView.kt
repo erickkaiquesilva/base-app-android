@@ -1,5 +1,6 @@
 package com.example.greencode
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.View
@@ -31,7 +32,5 @@ class QRCodeView : AppCompatActivity() {
 
     fun backToHome(v:View){
         onBackPressed()
-        finish()
     }
-
 }
