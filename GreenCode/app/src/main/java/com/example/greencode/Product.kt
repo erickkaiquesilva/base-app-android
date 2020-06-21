@@ -27,13 +27,6 @@ class Product : AppCompatActivity() {
         finish()
     }
 
-    fun changePoints(v:View){
-        val intent = Intent(this, Cupom::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-
     fun gastarPontos(v:View){
         val usuario = intent.getSerializableExtra("usuarioLogado") as Usuario
         val pontos = tvValueGreen.text.toString().toInt()

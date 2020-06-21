@@ -38,9 +38,6 @@ class Signup : AppCompatActivity() {
             Toast.makeText(this,"Erro ao cadastrar", Toast.LENGTH_SHORT)
         }
 
-
-
-
     }
 
 }
