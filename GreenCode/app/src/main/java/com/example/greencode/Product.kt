@@ -47,11 +47,11 @@ class Product : AppCompatActivity() {
             if(trocou){
                 val res = EnviarCuponTask().execute(usuario.email).get()
             }else{
-                Toast.makeText(this,"Não foi posivel fazer a troca ¬¬, Desculpe",Toast.LENGTH_LONG)
+                Toast.makeText(this,"Não foi posivel fazer a troca ¬¬, Desculpe",Toast.LENGTH_LONG).show()
             }
 
         }else{
-            Toast.makeText(this,"Você não tem pontos suficientes, Recicle + :)",Toast.LENGTH_LONG)
+            Toast.makeText(this,"Você não tem pontos suficientes, Recicle + :)",Toast.LENGTH_LONG).show()
         }
 
     }
