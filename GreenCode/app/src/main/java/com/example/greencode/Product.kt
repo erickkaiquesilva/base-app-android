@@ -33,18 +33,26 @@ class Product : AppCompatActivity() {
 
         if(usuario.pontos!! > pontos) {
 
-            usuario.pontos?.minus(pontos)
+            val novosPontos = usuario.pontos!! - pontos
+
+            usuario.pontos = novosPontos
 
             val trocou = AtualizarPontosTask().execute(usuario).get()
 
             if(trocou){
                 val res = EnviarCuponTask().execute(usuario.email).get()
+
+                val intent = Intent(this, Cupom::class.java)
+                intent.putExtra("usuarioLogado", usuario)
+                startActivity(intent)
+                finish()
+
             }else{
-                Toast.makeText(this,"Não foi posivel fazer a troca ¬¬, Desculpe",Toast.LENGTH_LONG)
+                Toast.makeText(this,"Não foi posivel fazer a troca ¬¬, Desculpe",Toast.LENGTH_LONG).show()
             }
 
         }else{
-            Toast.makeText(this,"Você não tem pontos suficientes, Recicle + :)",Toast.LENGTH_LONG)
+            Toast.makeText(this,"Você não tem pontos suficientes, Recicle + :)",Toast.LENGTH_LONG).show()
         }
 
     }

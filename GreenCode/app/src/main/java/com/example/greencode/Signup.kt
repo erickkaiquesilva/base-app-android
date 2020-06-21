@@ -35,7 +35,7 @@ class Signup : AppCompatActivity() {
             startActivity(intent)
             finish()
         }else{
-            Toast.makeText(this,"Erro ao cadastrar", Toast.LENGTH_SHORT)
+            Toast.makeText(this,"Erro ao cadastrar", Toast.LENGTH_SHORT).show()
         }
 
     }

@@ -59,7 +59,7 @@ class SignIn : AppCompatActivity() {
             startActivity(intent)
             finish()
         }else{
-            Toast.makeText(this,"Email ou Login Incorretos",Toast.LENGTH_SHORT)
+            Toast.makeText(this,"Email ou Login Incorretos",Toast.LENGTH_SHORT).show()
         }
 
     }
