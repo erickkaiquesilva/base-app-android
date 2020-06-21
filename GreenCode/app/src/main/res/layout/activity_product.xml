@@ -114,6 +114,7 @@ bonito com o padrão que ele colocou "
         ></TextView>
 
     <Button
+        android:onClick="gastarPontos"
         android:id="@+id/btn_trocar_pontos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

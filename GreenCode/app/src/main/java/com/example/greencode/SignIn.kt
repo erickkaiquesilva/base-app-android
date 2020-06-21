@@ -53,7 +53,9 @@ class SignIn : AppCompatActivity() {
 
         if(usuario != null){
             val intent = Intent(this, Home::class.java)
+            val intent2 = Intent(this, Product::class.java)
             intent.putExtra("usuarioLogado",usuario)
+            intent2.putExtra("usuarioLogado",usuario)
             startActivity(intent)
             finish()
         }else{

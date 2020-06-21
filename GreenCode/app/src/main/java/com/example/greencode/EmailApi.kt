@@ -4,12 +4,13 @@ import feign.Feign
 import feign.gson.GsonDecoder
 import feign.gson.GsonEncoder
 
-object ClienteUsuarioApi {
+object EmailApi {
 
-    fun criar(): UsuarioRequests {
+    fun criar(): EmailRequests {
         return Feign.builder()
             .decoder(GsonDecoder()) // classe responsável por criar os JSON nas requisições
             .encoder(GsonEncoder()) // classe responsável por converter JSON das respostas
-            .target(UsuarioRequests::class.java, "https://jsonplaceholder.typicode.com")
+            .target(EmailRequests::class.java, "https://jsonplaceholder.typicode.com")
     }
+
 }
