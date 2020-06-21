@@ -10,6 +10,6 @@ object ClienteUsuarioApi {
         return Feign.builder()
             .decoder(GsonDecoder()) // classe responsável por criar os JSON nas requisições
             .encoder(GsonEncoder()) // classe responsável por converter JSON das respostas
-            .target(UsuarioRequests::class.java, "https://greencode-backend-lb-1039102480.us-east-1.elb.amazonaws.com")
+            .target(UsuarioRequests::class.java, "http://greencode-backend-lb-1039102480.us-east-1.elb.amazonaws.com")
     }
 }
