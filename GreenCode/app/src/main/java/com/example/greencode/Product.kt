@@ -27,25 +27,26 @@ class Product : AppCompatActivity() {
         finish()
     }
 
-    fun changePoints(v:View){
-        val intent = Intent(this, Cupom::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-
     fun gastarPontos(v:View){
         val usuario = intent.getSerializableExtra("usuarioLogado") as Usuario
         val pontos = tvValueGreen.text.toString().toInt()
 
         if(usuario.pontos!! > pontos) {
 
-            usuario.pontos?.minus(pontos)
+            val novosPontos = usuario.pontos!! - pontos
+
+            usuario.pontos = novosPontos
 
             val trocou = AtualizarPontosTask().execute(usuario).get()
 
             if(trocou){
                 val res = EnviarCuponTask().execute(usuario.email).get()
+
+                val intent = Intent(this, Cupom::class.java)
+                intent.putExtra("usuarioLogado", usuario)
+                startActivity(intent)
+                finish()
+
             }else{
                 Toast.makeText(this,"Não foi posivel fazer a troca ¬¬, Desculpe",Toast.LENGTH_LONG).show()
             }

@@ -14,6 +14,7 @@ class Cupom : AppCompatActivity() {
     fun backToHome(v:View){
         Home.MyClass.activity!!.finish()
         val intent = Intent(this, Home::class.java)
+        intent.putExtra("usuarioLogado", getIntent().getSerializableExtra("usuarioLogado"))
         startActivity(intent)
         finish()
     }
