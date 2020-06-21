@@ -30,6 +30,7 @@ class Home : AppCompatActivity() {
 
     fun goToMarketplace(v:View){
         val intent = Intent(this, Marketplace::class.java)
+        intent.putExtra("usuarioLogado",getIntent().getSerializableExtra("usuarioLogado"))
         startActivity(intent)
     }
 
