@@ -6,10 +6,6 @@ import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
-import com.google.zxing.BarcodeFormat
-import com.google.zxing.MultiFormatWriter
-import com.google.zxing.WriterException
-import com.google.zxing.common.BitMatrix
 import kotlinx.android.synthetic.main.activity_q_r_code.*
 import net.glxn.qrgen.android.QRCode
 import com.google.gson.JsonObject
@@ -39,6 +35,7 @@ class QRCodeView : AppCompatActivity() {
     }
 
     fun backToHome(v:View){
+
         onBackPressed()
         finish()
     }
