@@ -28,6 +28,7 @@ class Highlight : Fragment() {
             intent.putExtra("product_valor", product_valor.text.toString())
             intent.putExtra("product_image", R.drawable.playstation_control)
             intent.putExtra("product_obs", product_obs)
+            intent.putExtra("usuarioLogado", activity?.intent?.getSerializableExtra("usuarioLogado"))
             startActivity(intent)
         }
         // Inflate the layout for this fragment
