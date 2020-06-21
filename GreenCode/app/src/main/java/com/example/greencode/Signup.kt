@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_signup.*
 
 class Signup : AppCompatActivity() {
 
@@ -13,9 +15,30 @@ class Signup : AppCompatActivity() {
     }
 
     fun goToWelcome(v:View){
-        val intent = Intent(this, Welcome::class.java)
-        startActivity(intent)
-        finish()
+
+        val nome = et_name.text.toString()
+        val sobrenome = et_surname.text.toString()
+        val cpf = et_id.text.toString()
+        val email = et_email.text.toString()
+        val senha = et_password.text.toString()
+
+
+
+        val usuario = CadastrarUsuarioTask().execute(Usuario(nome = nome, sobrenome = sobrenome,cpf = cpf,
+                                                   email = email,senha = senha)).get()
+
+        if(usuario != null){
+            val intent = Intent(this, Welcome::class.java)
+            intent.putExtra("usuarioLogado",usuario)
+            startActivity(intent)
+            finish()
+        }else{
+            Toast.makeText(this,"Erro ao cadastrar", Toast.LENGTH_SHORT)
+        }
+
+
+
+
     }
 
 }

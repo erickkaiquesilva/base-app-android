@@ -67,6 +67,7 @@ class FirstAccess : AppCompatActivity() {
         btn_next.setOnClickListener {
             if(view_pager.currentItem == view_pager.size){
                 val intent = Intent(this, Home::class.java)
+                intent.putExtra("usuarioLogado", getIntent().getSerializableExtra("usuarioLogado"))
                 startActivity(intent)
                 finish()
             }

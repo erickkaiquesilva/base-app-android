@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlinx.android.synthetic.main.activity_home.*
 
 class Home : AppCompatActivity() {
 
@@ -19,6 +20,12 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         MyClass.activity = this@Home
+
+        val usuario = getIntent().getSerializableExtra("usuarioLogado") as Usuario
+        user_points.text = usuario.pontos.toString()
+        user_name.text = usuario.nome
+        user_name_congrats.text = "${usuario.nome} ${usuario.sobrenome}"
+
     }
 
     fun goToMarketplace(v:View){
@@ -28,6 +35,7 @@ class Home : AppCompatActivity() {
 
     fun goToQRCode(v:View){
         val intent = Intent(this, QRCodeView::class.java)
+        intent.putExtra("usuarioLogado",getIntent().getSerializableExtra("usuarioLogado"))
         startActivity(intent)
     }
 }

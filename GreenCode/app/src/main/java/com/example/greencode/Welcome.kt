@@ -14,6 +14,7 @@ class Welcome : AppCompatActivity() {
 
     fun goToFirstAccess(v:View){
         val intent = Intent(this, FirstAccess::class.java)
+        intent.putExtra("usuarioLogado", getIntent().getSerializableExtra("usuarioLogado"))
         startActivity(intent)
         finish()
     }
