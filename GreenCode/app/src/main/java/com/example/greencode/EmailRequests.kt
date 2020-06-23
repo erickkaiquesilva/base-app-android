@@ -7,5 +7,5 @@ interface EmailRequests {
 
    @Headers("Content-Type: application/json")
    @RequestLine("POST /email/cupon")
-   fun enviarNovoCupon(email:String) : String
+   fun enviarNovoCupon(usuario:Usuario) : String
 }

@@ -40,7 +40,10 @@ class Product : AppCompatActivity() {
             val trocou = AtualizarPontosTask().execute(usuario).get()
 
             if(trocou){
-                val res = EnviarCuponTask().execute(usuario.email).get()
+
+                val res = EnviarCuponTask().execute(usuario).get()
+
+                Toast.makeText(this,"${res}",Toast.LENGTH_LONG).show()
 
                 val intent = Intent(this, Cupom::class.java)
                 intent.putExtra("usuarioLogado", usuario)
