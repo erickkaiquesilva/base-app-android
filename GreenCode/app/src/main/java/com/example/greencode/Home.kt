@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 class Home : AppCompatActivity() {
 
 
+
     class MyClass{
         companion object{
             var activity: Activity? = null
@@ -20,7 +21,6 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         MyClass.activity = this@Home
-
         val usuario = getIntent().getSerializableExtra("usuarioLogado") as Usuario
         user_points.text = usuario.pontos.toString()
         user_name.text = usuario.nome
@@ -38,5 +38,23 @@ class Home : AppCompatActivity() {
         val intent = Intent(this, QRCodeView::class.java)
         intent.putExtra("usuarioLogado",getIntent().getSerializableExtra("usuarioLogado"))
         startActivity(intent)
+    }
+
+    fun viewHidePoints(view: View) {
+        val usuario = getIntent().getSerializableExtra("usuarioLogado") as Usuario
+        if (user_points.text == usuario.pontos.toString()){
+            user_points.setText("-------------")
+            eye.setImageResource(R.drawable.eye)
+        }
+        else{
+            user_points.text = usuario.pontos.toString()
+            eye.setImageResource(R.drawable.close_eye)
+        }
+    }
+
+    fun logout(v:View){
+        val intent = Intent(this, SignIn::class.java)
+        startActivity(intent)
+        finish()
     }
 }
